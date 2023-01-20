@@ -1,4 +1,4 @@
-# Windows_Sanbox_Setup
+# Windows_Vm_Setup
 fiddling with powershell to set up a build machine from scratch within the Windows sandbox
 
 paste these lines into power shell to download and run setup.ps1
