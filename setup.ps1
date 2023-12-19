@@ -8,11 +8,14 @@
 # https://learn.microsoft.com/en-us/visualstudio/install/workload-and-component-ids
 # https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community
 
+# BUG this no longer works as a batch script... have to do it by hand... 
+#Start-Process -Wait -PassThru -FilePath vs_community.exe -ArgumentList  `
+#	"--passive", "--wait", `
+#	"--includeRecommended", `
+#	"--add", "Microsoft.VisualStudio.Workload.NativeDesktop"
+
 wget https://aka.ms/vs/17/release/vs_community.exe -outfile vs_community.exe
-Start-Process -Wait -PassThru -FilePath vs_community.exe -ArgumentList  `
-	"--passive", "--wait", `
-	"--includeRecommended", `
-	"--add", "Microsoft.VisualStudio.Workload.NativeDesktop"
+.\vs_community.exe --passive --wait --includeRecommended --add Microsoft.VisualStudio.Workload.NativeDesktop
 del vs_community.exe
 
 # https://github.com/ScoopInstaller/Install#readme
