@@ -8,7 +8,7 @@
 # https://learn.microsoft.com/en-us/visualstudio/install/workload-and-component-ids
 # https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community
 
-wget "https://aka.ms/vs/17/release/vs_community.exe" -UseBasicParsing -Outfile vs_community.exe
+wget https://aka.ms/vs/17/release/vs_community.exe -outfile vs_community.exe
 Start-Process -Wait -PassThru -FilePath vs_community.exe -ArgumentList  `
 	"--passive", "--wait", `
 	"--includeRecommended", `
